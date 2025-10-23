@@ -19,7 +19,7 @@ export default function NewsInput() {
     setResult(null);
 
     try {
-      const res = await fetch("https://wxhhm3-5000.csb.app/predict", {
+      const res = await fetch("https://rvmhp7-5000.csb.app/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, text }),
