@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
-const COLORS = ["#2ECC71", "#FF4B4B"]; // Green for REAL, Red for FAKE
+//const COLORS = ["#2ECC71", "#FF4B4B"]; // Green for REAL, Red for FAKE
 
 export default function NewsInput() {
   const [title, setTitle] = useState("");
@@ -22,7 +22,7 @@ export default function NewsInput() {
       const res = await fetch("https://ptjqht-5000.csb.app/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title, text }),
+        body: JSON.stringify({ text: `${title}. ${text}` }),
       });
       const data = await res.json();
       setResult(data);
