@@ -19,7 +19,7 @@ export default function NewsInput() {
     setResult(null);
 
     try {
-      const res = await fetch("https://p5ytg6-5000.csb.app", {
+      const res = await fetch("https://ptjqht-5000.csb.app, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, text }),
