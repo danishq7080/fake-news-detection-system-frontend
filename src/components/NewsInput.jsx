@@ -19,7 +19,7 @@ export default function NewsInput() {
     setResult(null);
 
     try {
-      const res = await fetch("https://ptjqht-5000.csb.app/predict", {
+      const res = await fetch("https://fake-news-detection-system-backend.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: `${title}. ${text}` }),
